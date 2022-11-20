@@ -342,7 +342,6 @@ https://templatemo.com/tm-538-digital-trend
   }
 
 
-
   /*---------------------------------------
      HERO
   -----------------------------------------*/
@@ -363,7 +362,6 @@ https://templatemo.com/tm-538-digital-trend
   }
 
 
-
   /*---------------------------------------
      PROJECT
   -----------------------------------------*/
@@ -372,108 +370,97 @@ https://templatemo.com/tm-538-digital-trend
     background: var(--project-bg);
   }
 
-  .project-wrapper {
+  .carousel {
+    display: none;
+  }
+
+  .carousel-item img {
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+  }
+
+  @media (min-width: 768px) {
+
+    .jumbotron {
+      display: none;
+    }
+
+    .carousel {
+      display: block;
+    }
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    background: transparent;
+    border: none;
+  }
+
+
+  /*
+  ---------------------------------------------
+  testimonials
+  ---------------------------------------------
+  */
+
+.testimonials-heading {
+  padding-top: 20px;
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+
+  .testimonials .item {
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #fff;
+    margin: 15px;
+    transition: all .3s;
+    position: relative;
+    z-index: 2;
+  }
+
+  .testimonials .item:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+  }
+
+  .testimonials .item p {
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  .testimonials .item h4 {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 900;
     position: relative;
   }
 
-  .project-wrapper img {
-    border-radius: var(--border-radius-small);
+  .testimonials .item span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #dc8cdb;
   }
 
-  .project-info {
-    background: var(--white-color);
-    border-radius: var(--border-radius-small);
-    position: absolute;
-    bottom: 32px;
-    right: 32px;
-    left: 32px;
-    width: 90%;
-    padding: 32px;
-  }
-
-  .project-info small {
-    font-family: Plain-Bold;
-    color: var(--gray-color);
-    position: relative;
-    top: 2px;
-  }
-
-  .project-info a {
-    color: var(--primary-color);
-  }
-
-  .project-info .project-icon {
-    background: var(--primary-color);
-  }
-
-  .project-icon {
+  .testimonials .item img {
+    max-width: 44px;
+    z-index: 2;
     position: absolute;
     right: 30px;
-    top: 40px;
-    background: var(--dark-color);
-    border-radius: var(--border-radius-large);
-    color: var(--white-color);
-    font-size: var(--h2-font-size);
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    padding-left: 5px;
+    bottom: 30px
   }
-
-  .owl-theme .owl-dots .owl-dot {
-    outline: none;
-  }
-
-  .owl-theme .owl-dots .owl-dot span {
-    background: var(--gray-color);
-    width: 50px;
-    height: 3px;
-    margin:  35px 5px;
-  }
-
-  .owl-theme .owl-dots .owl-dot.active span,
-  .owl-theme .owl-dots .owl-dot:hover span {
-    background: var(--secondary-color);
-  }
-
-  .list-detail {
-    margin-left: 1em;
-    padding-left: 1em;
-    position: relative;
-  }
-
-  .list-detail li {
-    display: block;
-    list-style: none;
-    margin: 0.6em 0 0 0.8em;
-  }
-
-  .list-detail li::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-width: 0 16px 16px 0;
-    border-color: transparent var(--secondary-color) transparent transparent;
-    border-style: solid;
-    position: absolute;
-    left: 0;
-  }
-
-  .list-detail span {
-    position: relative;
-    bottom: 5px;
-  }
-
-  .client-info img {
-    width: 100px;
-    margin-right: 1em;
-  }
-
 
 
   /*---------------------------------------
-      ABOUT
+      ABOUT - PAGE
   -----------------------------------------*/
 
   .about {
@@ -487,57 +474,8 @@ https://templatemo.com/tm-538-digital-trend
   }
 
 
-
   /*---------------------------------------
-      BLOG
-  -----------------------------------------*/
-
-  .blog-header {
-    border-radius: var(--border-radius-small);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .blog-header img {
-    border-radius: var(--border-radius-small);
-    display: block;
-  }
-
-  .blog-header-info {
-    background: linear-gradient(transparent,rgba(0,0,0,0.95));
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    padding: 2em;
-  }
-
-  .blog-header-info h3 {
-    max-width: 80%;
-  }
-
-  .blog-header-info a {
-    color: var(--white-color);
-  }
-
-  .blog-header-info a:hover {
-    color: var(--secondary-color);
-  }
-
-  .blog-sidebar img {
-    border-radius: var(--border-radius-small);
-    width: 159px;
-    margin-right: 22px;
-  }
-
-  .blog-sidebar h3 {
-    font-size: 18px;
-  }
-
-
-
-  /*---------------------------------------
-     CONTACT
+     CONTACT - PAGE
   -----------------------------------------*/
 
   .form-control,
@@ -675,7 +613,7 @@ https://templatemo.com/tm-538-digital-trend
   @media screen and (max-width: 991px) {
 
     .hero {
-      padding-top: 14em;
+      /* padding-top: 14em; */
     }
 
     .hero-text {
