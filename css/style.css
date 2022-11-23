@@ -52,7 +52,7 @@ https://templatemo.com/tm-538-digital-trend
     --base-font-family:     'Plain-Light', sans-serif;
     --title-font-family:    'Plain-Regular', sans-serif;
     --font-bold-family:     'Plain-Bold', sans-serif;
-    --font-weight-bold:     bold;
+    --font-weight-bold:      bold;
 
     --h1-font-size:         42px;
     --h2-font-size:         32px;
@@ -379,6 +379,22 @@ https://templatemo.com/tm-538-digital-trend
     margin: auto;
   }
 
+  .carousel-caption {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-large);
+    max-width: 780px;
+    margin: auto;
+  }
+
+  .carousel-caption p {
+    color: var(--white-color);
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    background: transparent;
+    border: none;
+  }
+
   @media (min-width: 768px) {
 
     .jumbotron {
@@ -390,15 +406,9 @@ https://templatemo.com/tm-538-digital-trend
     }
   }
 
-  .carousel-control-prev, .carousel-control-next {
-    background: transparent;
-    border: none;
-  }
-
-
   /*
   ---------------------------------------------
-  testimonials
+    TESTIMONIALS
   ---------------------------------------------
   */
 
