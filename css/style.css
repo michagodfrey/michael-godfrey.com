@@ -31,8 +31,9 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   :root {
-    --primary-color:        #2146C7;
-    --secondary-color:      #5C7AEA;
+    /* --primary-color:        #2146C7; */
+    --primary-color:        #5C7AEA;
+    --secondary-color:      #2146C7;
     --white-color:          #ffffff;
     --dark-color:           #171819;
     --gold-color:           #FBCB0A;
@@ -364,6 +365,21 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   /*---------------------------------------
+     SERVICES
+  -----------------------------------------*/
+
+  .card {
+    background: var(--primary-color);
+
+  }
+
+  .card h5, .card p {
+    color: var(--white-color);
+  }
+
+
+
+  /*---------------------------------------
      PROJECT
   -----------------------------------------*/
 
@@ -372,12 +388,12 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   .jumbotron {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
+    background-color: var(--project-bg);
+    color: var(--primary-color);
   }
 
   .jumbotron p {
-    color: var(--white-color);
+    color: var(--primary-color);
   }
 
   .carousel {
@@ -416,18 +432,6 @@ https://templatemo.com/tm-538-digital-trend
   .carousel-control-prev span, .carousel-control-next span {
     background-color: var(--gray-color);
     padding: 2rem;
-  }
-
-
-  @media (min-width: 768px) {
-
-    .jumbotron {
-      display: none;
-    }
-
-    .carousel {
-      display: block;
-    }
   }
 
   /*
@@ -576,13 +580,17 @@ https://templatemo.com/tm-538-digital-trend
     padding: 7em 0 6em 0;
   }
 
+  .site-footer strong {
+    color: var(--primary-color);
+  }
+
   .site-footer a {
     color: var(--p-color);
   }
 
   .site-footer a:hover,
   .footer-icon {
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 
   .footer-link li {
@@ -647,7 +655,13 @@ https://templatemo.com/tm-538-digital-trend
       display: block;
     }
 
+    .jumbotron {
+      display: none;
+    }
 
+    .carousel {
+      display: block;
+    }
   }
 
   @media screen and (max-width: 991px) {
