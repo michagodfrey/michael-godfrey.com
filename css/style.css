@@ -368,16 +368,13 @@ https://templatemo.com/tm-538-digital-trend
      SERVICES
   -----------------------------------------*/
 
-  .card {
-    background: var(--primary-color);
-
+  .services-title {
+    margin: auto;
   }
 
-  .card h5, .card p {
-    color: var(--white-color);
+  .card h5 {
+    color: var(--secondary-color);
   }
-
-
 
   /*---------------------------------------
      PROJECT
@@ -504,7 +501,7 @@ https://templatemo.com/tm-538-digital-trend
 
   .about-image img {
     display: block;
-    margin: 0 auto;
+    margin: auto;
   }
 
 
@@ -635,6 +632,11 @@ https://templatemo.com/tm-538-digital-trend
 
     .about-info h2 {
       max-width: 70%;
+    }
+
+    .card img {
+      min-height: 187px;
+      max-height: 187px;
     }
   }
 
