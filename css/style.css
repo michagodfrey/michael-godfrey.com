@@ -12,6 +12,7 @@ https://templatemo.com/tm-538-digital-trend
           url('../fonts/Plain-Regular.woff') format('woff');
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
   }
 
   @font-face {
@@ -20,6 +21,7 @@ https://templatemo.com/tm-538-digital-trend
           url('../fonts/Plain-Light.woff') format('woff');
       font-weight: bold;
       font-style: normal;
+      font-display: swap;
   }
 
   @font-face {
@@ -28,18 +30,18 @@ https://templatemo.com/tm-538-digital-trend
           url('../fonts/Plain-Bold.woff') format('woff');
       font-weight: bold;
       font-style: normal;
+      font-display: swap;
   }
 
   :root {
-    /* --primary-color:        #2146C7; */
     --primary-color:        #5C7AEA;
     --secondary-color:      #2146C7;
     --white-color:          #ffffff;
     --dark-color:           #171819;
     --gold-color:           #FBCB0A;
+    --dark-trans-color:     rgba(0, 0, 0, .8);
     --project-bg:           #DFF6FF;
     --menu-bg:              #06283D;
-    --title-color:          #15141a;
     --gray-color:           #909090;
     --link-color:           #2146C7;
     --p-color:              #666262;
@@ -49,7 +51,7 @@ https://templatemo.com/tm-538-digital-trend
     --font-bold-family:     'Plain-Bold', sans-serif;
     --font-weight-bold:      bold;
 
-    --h1-font-size:         24px;
+    --h1-font-size:         36px;
     --h2-font-size:         32px;
     --h3-font-size:         24px;
     --p-font-size:          18px;
@@ -58,6 +60,8 @@ https://templatemo.com/tm-538-digital-trend
 
     --border-radius-large:  100px;
     --border-radius-small:  5px;
+
+    --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
   }
 
   body {
@@ -76,17 +80,16 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   h1 {
-    color: var(--title-color);
     font-size: var(--h1-font-size);
   }
 
   h2 {
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
     font-weight: 100;
   }
 
   h3 {
-    font-size: var(--h3-font-size);
+    font-size: 22px;
     font-weight: 100;
     margin-bottom: 0;
   }
@@ -210,7 +213,6 @@ https://templatemo.com/tm-538-digital-trend
     padding: 4em 0;
   }
 
-
   /*---------------------------------------
     MENU
   -----------------------------------------*/
@@ -237,6 +239,7 @@ https://templatemo.com/tm-538-digital-trend
     font-size: 1rem;
     color: var(--white-color);
     display: none;
+    margin-left: 2.75rem;
   }
 
   .nav-link {
@@ -351,17 +354,37 @@ https://templatemo.com/tm-538-digital-trend
     overflow: hidden;
   }
 
+  .hero-text h1 {
+    font-size: var(--h3-font-size);
+  }
+
   .hero-text span {
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
   }
 
   .hero-bg {
-    background: linear-gradient(170deg, var(--primary-color) 64%, var(--white-color) 30%);
+    background-image: url(/images/waves-hero-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-img {
+    box-shadow: var(--box-shadow);
   }
 
   .hero-image {
     position: relative;
     top: 2em;
+  }
+
+  /*---------------------------------------
+     INTRO - SALES PITCH
+  -----------------------------------------*/
+
+  .intro {
+    position: relative;
+    overflow: hidden;
   }
 
   /*---------------------------------------
@@ -372,6 +395,20 @@ https://templatemo.com/tm-538-digital-trend
     margin: auto;
   }
 
+  .card {
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+  }
+
+  .card:hover {
+    background-color: var(--project-bg);
+  }
+
+  .card img {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+  }
+
   .card h5 {
     color: var(--secondary-color);
   }
@@ -380,17 +417,28 @@ https://templatemo.com/tm-538-digital-trend
      PROJECT
   -----------------------------------------*/
 
+  .project-title {
+    background-color: var(--gold-color);
+    padding: .5rem;
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow);
+  }
+
   .project {
-    background: var(--project-bg);
+    background-image: url(/images/waves-projects-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: var(--box-shadow);
   }
 
   .jumbotron {
-    background-color: var(--project-bg);
-    color: var(--primary-color);
+    background-color: var(--dark-trans-color);
+    color: var(--white-color);
+    box-shadow: var(--box-shadow);
   }
 
   .jumbotron p {
-    color: var(--primary-color);
+    color: var(--white-color);
   }
 
   .carousel {
@@ -410,8 +458,8 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   .carousel-caption {
-    background-color: var(--primary-color);
-    border-radius: var(--border-radius-large);
+    background-color: var(--dark-trans-color);
+    border-radius: var(--border-radius-small);
     max-width: 780px;
     margin: auto;
   }
@@ -427,8 +475,8 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   .carousel-control-prev span, .carousel-control-next span {
-    background-color: var(--gray-color);
-    padding: 2rem;
+    background-color: var(--dark-trans-color);
+    padding: 1rem;
   }
 
   /*
@@ -459,7 +507,7 @@ https://templatemo.com/tm-538-digital-trend
     transition: all .3s;
     position: relative;
     z-index: 2;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--box-shadow);
   }
 
   .testimonials .item p {
@@ -494,44 +542,43 @@ https://templatemo.com/tm-538-digital-trend
       ABOUT - PAGE
   -----------------------------------------*/
 
-  .about {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about-image img {
-    display: block;
+  .about-page-img {
+    display: flex;
+    justify-content: center;
     margin: auto;
   }
 
+  .about-page-img img {
+    width: 100%;
+    max-width: 500px;
+  }
 
   /*---------------------------------------
      CONTACT - PAGE
   -----------------------------------------*/
 
-  .form-control,
-  .contact-form .form-control {
-    box-shadow: none;
-    background: var(--project-bg);
-    border: 0;
-    padding: 1.7em 1.3em;
-    margin: 14px 0;
-  }
-
   .contact-form {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow);
     color: var(--white-color);
-    cursor: pointer;
     font-size: var(--p-font-size);
     line-height: 0px;
     padding: 2rem;
   }
 
-  .loading-container {
+  .custom-select {
+    font-size: 1rem;
+    color: rgb(73, 80, 87);
+  }
 
+  .loading-container {
     min-height: 60px;
     width: 100%;
+  }
+
+  textarea {
+    min-height: 100px;
   }
 
   #loading {
@@ -607,7 +654,8 @@ https://templatemo.com/tm-538-digital-trend
   .social-icon {
     position: relative;
     padding: 0;
-    margin: 0;
+
+    margin-top: 1em;
   }
 
   .social-icon li {
@@ -630,14 +678,10 @@ https://templatemo.com/tm-538-digital-trend
 
   @media screen and (min-width: 1200px) {
 
-    .about-info h2 {
+    .intro-info h2 {
       max-width: 70%;
     }
 
-    .card img {
-      min-height: 187px;
-      max-height: 187px;
-    }
   }
 
   @media screen and (min-width: 991px) {
@@ -649,6 +693,19 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   @media (min-width: 768px) {
+
+    h1 {
+      font-size: var(--h1-font-size);
+    }
+
+    h2 {
+      font-size: var(--h2-font-size);
+    }
+
+    h3 {
+      font-size: var(--h3-font-size);
+    }
+
     .navbar-brand {
       font-size: var(--h2-font-size);
     }
@@ -693,35 +750,5 @@ https://templatemo.com/tm-538-digital-trend
     .site-footer .social-icon {
       padding: 0;
       text-align: left;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-
-    h1 {
-      font-size: 36px;
-    }
-
-    h2 {
-      font-size: 28px;
-    }
-
-    h3 {
-      font-size: 22px;
-    }
-
-    .project-info {
-      right: 0;
-      left: 0;
-      margin: 0 auto;
-    }
-
-    .footer-link,
-    .site-footer .social-icon {
-      margin-top: 1em;
-    }
-
-    .footer-link li {
-      margin-left: 0;
     }
   }

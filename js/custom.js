@@ -1,11 +1,9 @@
-
   $(function () {
 
     // MENU
     $('.nav-link').on('click',function(){
       $(".navbar-collapse").collapse('hide');
     });
-
 
     // AOS ANIMATION
     AOS.init({
@@ -24,29 +22,30 @@
           }, 1000);
             event.preventDefault();
       });
-    });  
+    });
 
 
     // PROJECT SLIDE
-    $('#project-slide').owlCarousel({
-      loop: true,
-      center: true,
-      autoplayHoverPause: false,
-      autoplay: true,
-      margin: 30,
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-          },
-          768:{
-              items:2,
-          }
-      }
-    });
+    // $('#project-slide').owlCarousel({
+    //   loop: true,
+    //   center: true,
+    //   autoplayHoverPause: false,
+    //   autoplay: true,
+    //   margin: 30,
+    //   responsiveClass:true,
+    //   responsive:{
+    //       0:{
+    //           items:1,
+    //       },
+    //       768:{
+    //           items:2,
+    //       }
+    //   }
+    // });
 
   });
 
-
-    
-
+  // OPEN CONTACT PAGE
+  function openContact() {
+    window.location.href = "contact.html";
+  }

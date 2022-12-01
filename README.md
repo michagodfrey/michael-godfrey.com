@@ -14,6 +14,8 @@ Favicon [code icon](https://icons8.com/icon/19293/code) from [Icons8](https://ic
 
 ### Images
 
+Images optimised and converted to webp format by [Squoosh](https://squoosh.app/)
+
 Responsive Web Design image from [SEEKPNG](https://www.seekpng.com/idown/u2t4u2w7r5i1r5y3_website-responsive-using-techniques-like-psd-to-joomla/)
 
 Responsive web page service image from [SEEKPNG](https://www.seekpng.com/idown/u2y3q8y3i1r5u2u2_mobile-responsive-website-design-bedfordshire-responsive-design-website/)

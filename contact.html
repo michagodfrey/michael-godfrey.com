@@ -26,7 +26,6 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
       (function() {
-          // https://dashboard.emailjs.com/admin/integration
           emailjs.init('user_0tagcQ1gmclJDxwAymjso');
       })();
     </script>
@@ -71,13 +70,13 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
     </nav>
 
      <!-- CONTACT -->
-     <section class="contact section-padding">
+     <section class="section-padding">
           <div class="container">
                <div class="row">
 
                     <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center" data-aos="fade-up">
 
-                      <h1 class="mb-4">Hey there, Let's <strong>talk</strong> about your <strong>next project</strong></h1>
+                      <h1 class="mb-4">Let's <strong>talk</strong> about your <strong>next project!</strong></h1>
 
                       <p>or email me at <a href="mailto:mail@michael-godfrey.com">mail@michael-godfrey.com</a></p>
 
@@ -91,13 +90,22 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
                     <div class="col-lg-8 mx-auto col-md-10 col-12">
                       <form class="contact-form" data-aos="fade-up" data-aos-delay="300">
                         <div class="row">
-                          <div class="col-lg-6 col-12">
+                          <div class="col-lg-6 col-12 mb-4">
                             <input id="name" type="text" class="form-control" name="user_name" placeholder="Name">
                           </div>
-                          <div class="col-lg-6 col-12">
+                          <div class="col-lg-6 col-12 mb-4">
                             <input id="email" type="email" class="form-control" name="user_email" placeholder="Email">
                           </div>
-                          <div class="col-12">
+                          <div class="col-12 mb-4">
+                            <select id="subject" class="custom-select col-12" name="user_subject">
+                              <option value="" disabled selected>Subject</option>
+                              <option value="website">Websites and hosting</option>
+                              <option value="optimization">Website Optimization</option>
+                              <option value="wordpress">WordPress</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div>
+                          <div class="col-12 mb-4">
                             <textarea id="message" class="form-control" name="message" placeholder="Message"></textarea>
                           </div>
                           <div class="col-lg-5 col-7">
