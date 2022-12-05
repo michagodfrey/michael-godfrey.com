@@ -23,3 +23,7 @@ Responsive web page service image from [SEEKPNG](https://www.seekpng.com/idown/u
 Optimize web page service image from [SEEKPNG](https://www.seekpng.com/idown/u2e6w7e6y3r5e6r5_website-design-preston-lancashire-website-re-designing/)
 
 WordPress service image from [SEEKPNG](https://www.seekpng.com/idown/u2e6u2q8r5a9t4y3_wordpress-development-wordpress-developer/)
+
+Intro section background svg [softr](https://www.softr.io/tools/svg-wave-generator)
+
+Projects section background svg from [Svg Wave](https://svgwave.in/)

@@ -26,7 +26,7 @@
      <link rel="icon" href="/images/icons8-code-96.png">
 
 </head>
-<body>
+<body onload="resetService()">
 
      <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg">
@@ -100,20 +100,16 @@
           <div class="container">
                <div class="row">
 
-                    <div class="col-lg-7 mx-auto col-md-10 col-12">
-                         <div class="intro-info mb-5">
-
+                    <div class="d-flex flex-column flex-lg-row">
+                         <div class="col-lg-7 mx-auto col-md-10 col-12">
                               <h2 class="mb-4" data-aos="fade-up">I can make <strong>your next website or whatever</strong> look really good and stuff</h2>
-
-                              <p class="mb-0" data-aos="fade-up">I am a freelance web developer who can deliver with a personal touch. I work with small businesses and individuals who want a website set up, the whole process, domain acquisition, web hosting and website design.
-
-                                  If you need an awesome website, consider sending me a message on the <a href="contact.html">contact</a> page.
+                              <p class="mb-0" data-aos="fade-up">
+                                I am a freelance web developer who can deliver with a personal touch. I work with small businesses and individuals who want a website set up, the whole process, domain acquisition, web hosting and website design.
+                                If you need an awesome website, consider sending me a message on the <a href="contact.html">contact</a> page.
                               <br><br>Don't forget that <strong>more and more people use the web to find stuff</strong> so being visible online is critical. And not just a webpage, you need to be findable on Google maps and things.</p>
                          </div>
-
-                         <div data-aos="fade-up" data-aos-delay="200">
-
-                          <img src="images/responsive-web.webp" class="img-fluid" alt="responsive web design image">
+                         <div class="intro-img-box">
+                          <img src="images/responsive-web.webp" class="img-fluid intro-img" alt="responsive web design image">
                         </div>
 
                     </div>
@@ -128,7 +124,7 @@
         <div class="row">
           <h2 class="mb-4 services-title" data-aos="fade-up"><strong>Services</strong></h2>
           <div class="card-deck">
-            <div class="card" data-aos="fade-up" onclick="openContact()">
+            <div class="card" data-aos="fade-up" onclick="getService('website')">
               <img src="images/webdev.webp" class="card-img-top" alt="web page service">
               <div class="card-body">
                 <h5 class="card-title">Static Website or Landing Page</h5>
@@ -136,7 +132,7 @@
                 <p class="card-text"><small>$100 USD</small></p>
               </div>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="200" onclick="openContact()">
+            <div class="card" data-aos="fade-up" data-aos-delay="200" onclick="getService('optimization')">
               <img src="images/optimize.webp" class="card-img-top" alt="optimize service">
               <div class="card-body">
                 <h5 class="card-title">Website Optimization</h5>
@@ -144,7 +140,7 @@
                 <p class="card-text"><small>$150 USD</small></p>
               </div>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="400" onclick="openContact()">
+            <div class="card" data-aos="fade-up" data-aos-delay="400" onclick="getService('wordpress')">
               <img src="images/wordpress.webp" class="card-img-top" alt="wordpress service">
               <div class="card-body">
                 <h5 class="card-title">WordPress Site</h5>
@@ -170,21 +166,24 @@
                         </h2>
 
                         <!-- PROJECT CARDS - HIDDEN ON TABLET AND DESKTOP SCREENS -->
-                        <div class="jumbotron jumbotron-fluid" data-aos="fade-up">
-                          <div class="container">
-                            <img src="images/ech-banner.webp" class="d-block w-100 mb-2" alt="Ethan's Coffee Heaven project image">
-                            <h5>Ethan's Coffee Heaven</h5>
-                            <p class="lead">Cafe business</p>
+                        <a href="https://ethanscoffeeheaven.com/" target="_blank">
+                          <div class="jumbotron jumbotron-fluid" data-aos="fade-up">
+                            <div class="container">
+                              <img src="images/ech-banner.webp" class="d-block w-100 mb-2" alt="Ethan's Coffee Heaven project image">
+                              <h5>Ethan's Coffee Heaven</h5>
+                              <p class="lead">Cafe business</p>
+                            </div>
                           </div>
-                        </div>
-
-                        <div class="jumbotron jumbotron-fluid" data-aos="fade-up">
-                          <div class="container">
-                            <img src="images/blog.webp" class="d-block w-100" alt="Vulavula-Dre is Great project image">
-                            <h5>Vulavula-Dre Blog</h5>
-                            <p class="lead">WordPress personal blog</p>
+                        </a>
+                        <a href="https://vulavula-dre.lovestoblog.com/" target="_blank">
+                          <div class="jumbotron jumbotron-fluid" data-aos="fade-up">
+                            <div class="container">
+                              <img src="images/blog.webp" class="d-block w-100" alt="Vulavula-Dre is Great project image">
+                              <h5>Vulavula-Dre Blog</h5>
+                              <p class="lead">WordPress personal blog</p>
+                            </div>
                           </div>
-                        </div>
+                        </a>
 
                         <!-- CAROUSEL - HIDDEN ON MOBILE SCREEN -->
                          <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-aos="fade-up">
@@ -193,15 +192,20 @@
                                <li data-target="#carousel" data-slide-to="0" class="active"></li>
                                <li data-target="#carousel" data-slide-to="1"></li>
                              </ol>
-                             <div class="carousel-item active">
-                               <img src="images/ech-banner.webp" class="d-block w-100 mb-2" alt="Ethan's Coffee Heaven project image">
-                               <div class="carousel-caption d-none d-md-block">
-                                <h5>Ethan's Coffee Heaven</h5>
-                                <p>Cafe business</p>
-                              </div>
-                             </div>
+
+                               <div class="carousel-item active">
+                                 <a href="https://ethanscoffeeheaven.com/" target="_blank">
+                                   <img src="images/ech-banner.webp" class="d-block w-100 mb-2" alt="Ethan's Coffee Heaven project image">
+                                  </a>
+                                 <div class="carousel-caption d-none d-md-block">
+                                  <h5>Ethan's Coffee Heaven</h5>
+                                  <p>Cafe business</p>
+                                </div>
+                               </div>
                              <div class="carousel-item">
-                               <img src="images/blog.webp" class="d-block w-100" alt="Vulavula-Dre is Great project image">
+                               <a href="https://vulavula-dre.lovestoblog.com/" target="_blank">\
+                                 <img src="images/blog.webp" class="d-block w-100" alt="Vulavula-Dre is Great project image">
+                               </a>
                                <div class="carousel-caption d-none d-md-block">
                                 <h5>Vulavula-Dre Blog</h5>
                                 <p>WordPress personal blog</p>
@@ -238,7 +242,7 @@
             <div>
               <div class="item">
                 <p>“We always wanted a website so customers could find us but didn't know where to start. Michael did it all for us and business has shot up 200% since our webite went live.”</p>
-                  <h4>Mel ???????????</h4>
+                  <h4>Mel Joseph</h4>
                   <span>Cafe Manager</span>
                   <i class="fa fa-quote-right"></i>
               </div>

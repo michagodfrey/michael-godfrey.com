@@ -39,7 +39,7 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
           <a class="navbar-brand" href="index.html">
               <i class="fa fa-code"></i>
               Michael Godfrey
-              <p>Web Developer and Web Administrator</p>
+              <p>Web Developer</p>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -98,7 +98,7 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
                           </div>
                           <div class="col-12 mb-4">
                             <select id="subject" class="custom-select col-12" name="user_subject">
-                              <option value="" disabled selected>Subject</option>
+                              <option value="default" disabled selected>Subject</option>
                               <option value="website">Websites and hosting</option>
                               <option value="optimization">Website Optimization</option>
                               <option value="wordpress">WordPress</option>
@@ -173,6 +173,12 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
      <script src="js/message.js"></script>
+     <!-- set select option when user clicks on service -->
+     <script>
+      const subject = document.getElementById('subject');
+      subject.value = localStorage.getItem("service");
+      subject.value === 'default' ? subject.style.background = "white" : subject.style.background = "gold";
+     </script>
 
 </body>
 </html>

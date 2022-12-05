@@ -24,28 +24,18 @@
       });
     });
 
-
-    // PROJECT SLIDE
-    // $('#project-slide').owlCarousel({
-    //   loop: true,
-    //   center: true,
-    //   autoplayHoverPause: false,
-    //   autoplay: true,
-    //   margin: 30,
-    //   responsiveClass:true,
-    //   responsive:{
-    //       0:{
-    //           items:1,
-    //       },
-    //       768:{
-    //           items:2,
-    //       }
-    //   }
-    // });
-
   });
 
-  // OPEN CONTACT PAGE
-  function openContact() {
+  // STORE SERVICE USER CLICKS ON AND OPEN CONTACT PAGE WITH SERVICE AS TOPIC ON FORM
+  let selectedService = "";
+
+  // reset service when home or about page loads
+  function resetService() {
+    selectedService = localStorage.setItem("service", "default");
+  }
+
+  // set selectedService to local storage and open contact page
+  function getService(service) {
+    selectedService = localStorage.setItem("service", service);
     window.location.href = "contact.html";
   }

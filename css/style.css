@@ -387,6 +387,20 @@ https://templatemo.com/tm-538-digital-trend
     overflow: hidden;
   }
 
+  .intro-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    display: none;
+  }
+
+  .intro-img-box {
+    transform: translateY(-160px);
+    display: none;
+  }
+
+
   /*---------------------------------------
      SERVICES
   -----------------------------------------*/
@@ -684,7 +698,11 @@ https://templatemo.com/tm-538-digital-trend
 
   }
 
-  @media screen and (min-width: 991px) {
+  @media screen and (min-width: 992px) {
+
+    .intro-img-box {
+      transform: translateY(0px);
+    }
 
     .project h2 {
       max-width: 32%;
@@ -711,6 +729,14 @@ https://templatemo.com/tm-538-digital-trend
     }
 
     .navbar-brand p {
+      display: block;
+    }
+
+    .intro-img-box {
+      display: flex;
+    }
+
+    .intro-img {
       display: block;
     }
 
