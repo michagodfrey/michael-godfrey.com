@@ -27,3 +27,7 @@ WordPress service image from [SEEKPNG](https://www.seekpng.com/idown/u2e6u2q8r5a
 Intro section background svg [softr](https://www.softr.io/tools/svg-wave-generator)
 
 Projects section background svg from [Svg Wave](https://svgwave.in/)
+
+### Writing
+
+Some promotional text was created or inspired by openAI's [chatGPT](https://openai.com/blog/chatgpt/)

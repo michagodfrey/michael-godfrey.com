@@ -74,7 +74,7 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
           <div class="container">
                <div class="row">
 
-                    <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center" data-aos="fade-up">
+                    <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center">
 
                       <h1 class="mb-4">Let's <strong>talk</strong> about your <strong>next project!</strong></h1>
 
@@ -88,7 +88,7 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
 
 
                     <div class="col-lg-8 mx-auto col-md-10 col-12">
-                      <form class="contact-form" data-aos="fade-up" data-aos-delay="300">
+                      <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
                         <div class="row">
                           <div class="col-lg-6 col-12 mb-4">
                             <input id="name" type="text" class="form-control" name="user_name" placeholder="Name">
@@ -140,7 +140,7 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
              </p>
 
              <p>
-               <a href="mailto: mail@michael-godfrey.com">
+               <a href="mailto:mail@michael-godfrey.com">
                  <i class="fa fa-envelope footer-icon"></i>
                  mail@michael-godfrey.com
                </a>
@@ -178,6 +178,17 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
       const subject = document.getElementById('subject');
       subject.value = localStorage.getItem("service");
       subject.value === 'default' ? subject.style.background = "white" : subject.style.background = "gold";
+      // edit h1 text depending on service
+      // const h1 = document.getElementById("h1");
+      // if (subject.value === 'website') {
+      //   h1.innerHTML = "website"
+      // }
+      // if (subject.value === 'optimization') {
+      //   h1.innerHTML = "optimize"
+      // }
+      // if (subject.value === 'wordpress') {
+      //   h1.innerHTML = "Great choice! <strong>WordPress</strong> is free and open source, well supported, highly customizable and easy to use."
+      // }
      </script>
 
 </body>

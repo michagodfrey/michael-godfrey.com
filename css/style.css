@@ -371,6 +371,8 @@ https://templatemo.com/tm-538-digital-trend
 
   .hero-img {
     box-shadow: var(--box-shadow);
+    max-height: 408px;
+    border-radius: 50%;
   }
 
   .hero-image {
@@ -385,6 +387,10 @@ https://templatemo.com/tm-538-digital-trend
   .intro {
     position: relative;
     overflow: hidden;
+  }
+
+  .intro p {
+    text-align: justify;
   }
 
   .intro-img {
@@ -416,6 +422,10 @@ https://templatemo.com/tm-538-digital-trend
 
   .card:hover {
     background-color: var(--project-bg);
+  }
+
+  .card-text {
+    text-align: justify;
   }
 
   .card img {
@@ -504,13 +514,6 @@ https://templatemo.com/tm-538-digital-trend
     margin-top: 0px;
     text-align: center;
     margin-bottom: 30px;
-  }
-
-  .section-heading h4 {
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #7a7a7a;
-    font-weight: 600;
   }
 
   .testimonials .item {
