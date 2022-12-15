@@ -1,8 +1,8 @@
   $(function () {
-
-    // MENU
-    $('.nav-link').on('click',function(){
-      $(".navbar-collapse").collapse('hide');
+    
+    // TOGGLE MOBILE MENU
+    $("#toggle-menu").click(function () {
+      $("#menu").slideToggle("slow");
     });
 
     // AOS ANIMATION
@@ -12,30 +12,40 @@
       anchorPlacement: 'center-bottom'
     });
 
-
-    // SMOOTH SCROLL
-    $(function() {
-      $('.nav-link').on('click', function(event) {
-        var $anchor = $(this);
-          $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 0
-          }, 1000);
-            event.preventDefault();
-      });
-    });
-
   });
+
+  // TOGGLE MENU BTN ANIMATION TRIGGER
+  const button = document.getElementById("toggle-menu");
+
+  button.addEventListener("click", () => {
+    button.ariaExpanded = !JSON.parse(button.ariaExpanded);
+  })
 
   // STORE SERVICE USER CLICKS ON AND OPEN CONTACT PAGE WITH SERVICE AS TOPIC ON FORM
   let selectedService = "";
 
-  // reset service when home or about page loads
   function resetService() {
     selectedService = localStorage.setItem("service", "default");
   }
 
-  // set selectedService to local storage and open contact page
   function getService(service) {
     selectedService = localStorage.setItem("service", service);
     window.location.href = "contact.html";
+  }
+
+  // SCROLL TO TOP BUTTON
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    const mybutton = document.getElementById("scrollBtn");
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }

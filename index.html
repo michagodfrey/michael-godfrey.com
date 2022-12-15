@@ -11,7 +11,7 @@
      <meta name="description" content="Freelance web developer and web administrator offering services to small businesses and individuals.
      I can build you a new website, improve your existing website and make you more visible online.">
      <meta name="author" content="Michael Godfrey">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -19,7 +19,7 @@
      <link rel="stylesheet" href="css/aos.css">
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="/css/normalize.css">
+     <link rel="stylesheet" href="css/normalize.css">
      <link rel="stylesheet" href="css/style.css">
 
      <!-- FAVICON -->
@@ -27,6 +27,11 @@
 
 </head>
 <body onload="resetService()">
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button onclick="topFunction()" id="scrollBtn" title="Go to top">
+    <i class="fa fa-arrow-circle-o-up"></i>
+  </button>
 
      <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg">
@@ -37,12 +42,17 @@
               <p>Web Developer</p>
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button
+              id="toggle-menu"
+              class="navbar-toggler"
+              type="button"
+              aria-expanded="false"
+              aria-label="toggle navigation menu"
+            >
+              <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-collapse" id="menu" style="display: none">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="#services" class="nav-link smoothScroll">Services</a>
@@ -55,7 +65,12 @@
                     </li>
 
                     <!-- <li class="nav-item">
-                        <a href="https://docs.google.com/document/d/1R4C74Jm3oEx9XqhsnJkh-p3EUgEsXVTr/edit?usp=sharing&ouid=112309810791255870080&rtpof=true&sd=true" target="_blank" class="nav-link">Resume</a>
+                        <a
+                          href="https://docs.google.com/document/d/1R4C74Jm3oEx9XqhsnJkh-p3EUgEsXVTr/edit?usp=sharing&ouid=112309810791255870080&rtpof=true&sd=true"
+                          target="_blank"
+                          class="nav-link"
+                          aria-label="resume of Michael Godfrey">Resume
+                       </a>
                     </li> -->
 
                     <li class="nav-item">
@@ -83,8 +98,8 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-10 col-12 d-flex justify-content-center">
-              <div class="hero-image">
+            <div class="col-lg-6 col-md-10 col-12">
+              <div class="hero-img-box d-flex justify-content-center">
 
                 <img src="images/profile-pic.webp" class="hero-img" alt="Image of Michael Godfrey">
               </div>
@@ -96,27 +111,100 @@
 
 
      <!-- INTRO - SALES PITCH -->
-     <section class="intro section-padding">
+     <section class="section-padding-half intro-bg">
           <div class="container">
-               <div class="row" data-aos="fade-up" data-aos-delay="300">
+               <div class="row">
 
-                    <div class="d-flex flex-column flex-lg-row">
-                         <div class="col-lg-7 mx-auto col-md-10 col-12">
-                              <h2 class="mb-4">Get a <strong>fast, search engine optimized website</strong> with domain name and hosting.</h2>
-                              <p class="mb-0">
-                                Are you looking to take your business to the next level with a professionally designed website? Look no further!
-                                I am a freelance web developer who can bring your vision to life.
-                                <br><br>
-                                With a focus on user-friendly design and search engine optimization, your website will not only look great, but it will also be easy for your customers to find.
-                                Plus, my responsive design ensures that your website will look great on any device, from desktop computers to smartphones.
-                                <br><br>
-                                My personalized service will take care of all the technical details and leave you with clear and concise instructions for future updates and maintenance.
-                                <a href="contact.html">Contact me</a> today to learn more and to get started on your new website.
-                              </p>
+                    <div>
+                         <div class="intro d-flex flex-column mx-auto col-12">
+                              <h2 class="text-center mb-4 mx-auto col-lg-10">Get a <strong>fast</strong>, search engine <strong>optimized</strong> website</h2>
+
+                              <!-- intro - mobile -->
+                              <div class="intro-item intro-item-mobile mx-auto">
+                                <p>
+                                  Are you looking to establish a <strong>strong online presence</strong> in the digital marketing space?
+                                  I am a freelance web developer offering <strong>personalized solutions</strong> to suit your needs.
+                                  <br><br>
+                                  My <strong>custom service</strong> is affordable and if you are starting from zero web presence, I can arrange the <strong>best hosting and domain</strong> option for your goals.
+                                  <br><br>
+                                  I also offer <strong>ongoing support and maintenance</strong> to help you rank highly in search results and maps.
+                                  Let's work together to make your online goals a reality.
+                                  <br><br>
+                                  <a href="contact.html">Contact me</a>
+                                  today to discuss your project and get a customized quote.
+                                </p>
+                              </div>
+
+                              <!-- intro -->
+                              <div class="intro-item mx-auto my-5" data-aos="zoom-in-up">
+                                <p>
+                                  Are you looking to establish your presence in the <strong>digital marketing space</strong>?
+                                  Let me bring your vision to life!
+                                  I am a freelance web developer offering <strong>tailored</strong> services at <strong>affordable prices</strong>.
+                                  I offer:
+                                </p>
+                                  <ul>
+                                    <li><i class="fa fa-check-square"></i> Personalized web service tailored to your needs</li>
+                                    <li><i class="fa fa-check-square"></i> Responsive website that looks great on all devices</li>
+                                    <li><i class="fa fa-check-square"></i> Rank highly in search results and maps</li>
+                                    <li><i class="fa fa-check-square"></i> Ongoing support and maintenance</li>
+                                  </ul>
+                              </div>
+
+                              <!-- new website -->
+                              <div class="intro-item my-5" data-aos="fade-right" data-aos-delay="500">
+                                <h3>Get a new website</h3>
+                                <p>
+                                  Go from zero online presence to owning a fast and responsive website <strong>where people find you</strong>.
+                                  Choose between a website built with <strong>HTML</strong> or <strong>WordPress</strong>.
+                                  If needed, I can seek out the most <strong>cost-effective</strong> hosting and domain option that makes sense for you.
+                                </p>
+                                <ul>
+                                  <li><i class="fa fa-check-square"></i> Customized style and features for your needs</li>
+                                  <li><i class="fa fa-check-square"></i> Best hosting and domain deal for your needs</li>
+                                  <li><i class="fa fa-check-square"></i> Choose website built with Wordpress or HTML</li>
+                                </ul>
+                              </div>
+
+                              <!-- optimize website -->
+                              <div class="intro-item intro-item-right my-5" data-aos="fade-left" data-aos-delay="500">
+                                <h3>Improve your website</h3>
+                                <p>
+                                  Do you already have a website?
+                                  Speed and search engine optimization will help your website to <strong>rank higher</strong> in search results, attract <strong>more visitors</strong>, and improve <strong>conversions</strong>,
+                                  ensuring that your website stays current and competitive.
+                                </p>
+                                <ul>
+                                  <li><i class="fa fa-check-square"></i> Search engine optimization</li>
+                                  <li><i class="fa fa-check-square"></i> Speed optimization</li>
+                                  <li><i class="fa fa-check-square"></i> Modernize style to fit all devices</li>
+                                </ul>
+                              </div>
+
+                              <!-- ongoing support -->
+                              <div class="intro-item my-5" data-aos="fade-right">
+                                <h3>Personalized service with ongoing support</h3>
+                                <p>
+                                  I will work closely with you to understand your business needs and goals.
+                                  My services include:
+                                </p>
+                                <ul>
+                                  <li><i class="fa fa-check-square"></i> Ongoing support and maintenance</li>
+                                  <li><i class="fa fa-check-square"></i> Stand out in Google Search and Maps</li>
+                                </ul>
+                              </div>
+
+                              <!-- call to action -->
+                              <div class="intro-item mx-auto my-5" data-aos="zoom-in-up" data-aos-delay="300">
+                                <h3>Get a quote today</h3>
+                                <p>
+                                  To start or renew your online presence,
+                                  <a href="contact.html"><strong>contact me</strong></a>
+                                  to discuss your project and get a customized quote.
+                                </p>
+                              </div>
+
                          </div>
-                         <div class="intro-img-box">
-                          <img src="images/responsive-web.webp" class="img-fluid intro-img" alt="responsive web design image">
-                        </div>
 
                     </div>
 
@@ -124,37 +212,31 @@
           </div>
      </section>
 
+
      <!-- SERVICES -->
-    <section id="services" class="mb-5">
+    <section id="services" class="section-padding">
       <div class="container">
         <div class="row">
-          <h2 class="mb-4 services-title"><strong>Services</strong></h2>
+          <h2 class="mb-4 mx-auto"><strong>Services</strong></h2>
           <div class="card-deck">
-            <div class="card" data-aos="fade-up" onclick="getService('optimization')">
+            <div class="card" data-aos="fade-right" onclick="getService('optimization')">
               <img src="images/optimize.webp" class="card-img-top" alt="optimize service">
               <div class="card-body">
-                <h5 class="card-title">Website Optimization</h5>
-                <p class="card-text">Do you already have a website that looks a bit dated, loads slowly or not optimized for mobile devices? Give it a makeover!</p>
-                <p class="card-text">You can also update hosting and domain options to make sure you're getting the best deal.</p>
-                <p class="card-text"><small>From 2 day delivery. Starting from $75 USD. Price based size and condition of website.</small></p>
+                <h3 class="card-title text-center">Improve Your Website</h3>
+                <div class="card-line"></div>
+                <p class="card-text">Does your website look a bit dated, loads slowly or not optimized for mobile devices? Give it a makeover!</p>
+                <p class="card-price mt-4 pb-1 text-center">From <strong>$75</strong> USD*</p>
+                <p class="card-text"><small>*For one website with up to 5 pages | 2 day delivery</small></p>
               </div>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="200" onclick="getService('website')">
+            <div class="card" data-aos="fade-left" onclick="getService('website')">
               <img src="images/webdev.webp" class="card-img-top" alt="web page service">
               <div class="card-body">
-                <h5 class="card-title">Static Website or Landing Page</h5>
+                <h3 class="card-title text-center">Get New Website</h3>
+                <div class="card-line"></div>
                 <p class="card-text">Kickstart your online marketing with a fast, responsive website with an A+ SEO rating where customers will find you.</p>
-                <p class="card-text">This is the best option for promoting a product or service in your local area and online.</p>
-                <p class="card-text"><small>3 day delivery. Starting from $100 USD. Price based on size, domain and hosting options.</small></p>
-              </div>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="400" onclick="getService('wordpress')">
-              <img src="images/wordpress.webp" class="card-img-top" alt="wordpress service">
-              <div class="card-body">
-                <h5 class="card-title">WordPress Site</h5>
-                <p class="card-text">If you need an online shop, blog or simply want more control over your online presence, get your own WordPress site!</p>
-                <p class="card-text">This is the best option if you want a blog or to maintain and edit the website content yourself.</p>
-                <p class="card-text"><small>3 day delivery. Starting from $120 USD. Price based on features, domain and hosting options.</small></p>
+                <p class="card-price mt-4 pb-1 text-center">From <strong>$100</strong> USD*</p>
+                <p class="card-text"><small>*For website up to 5 pages | Excludes hosting and domain name - free options available | 3 day delivery</small></p>
               </div>
             </div>
           </div>
@@ -174,34 +256,29 @@
                             <strong>work for clients</strong>
                         </h2>
 
-                        <!-- PROJECT CARDS - HIDDEN ON TABLET AND DESKTOP SCREENS -->
+                        <!-- PROJECT CARDS - DISPLAYED ON MOBILE SCREENS -->
                         <a href="https://ethanscoffeeheaven.com/" target="_blank">
-                          <div class="jumbotron jumbotron-fluid" data-aos="fade-up">
+                          <div class="jumbotron jumbotron-fluid">
                             <div class="container">
                               <img src="images/ech-banner.webp" class="d-block w-100 mb-2" alt="Ethan's Coffee Heaven project image">
                               <h5>ethanscoffeeheaven.com</h5>
-                              <p class="lead">An SEO optimized static website with domain name and hosting</p>
+                              <p class="lead">An SEO optimized static website that is easily found by customers</p>
                             </div>
                           </div>
                         </a>
                         <a href="https://vulavula-dre.lovestoblog.com/" target="_blank">
-                          <div class="jumbotron jumbotron-fluid" data-aos="fade-up">
+                          <div class="jumbotron jumbotron-fluid">
                             <div class="container">
                               <img src="images/blog.webp" class="d-block w-100" alt="Vulavula-Dre is Great project image">
                               <h5>vulavula-dre.lovestoblog.com</h5>
-                              <p class="lead">A personal WordPress blog with free hosting</p>
+                              <p class="lead">A personal WordPress blog with free domain name and hosting</p>
                             </div>
                           </div>
                         </a>
 
-                        <!-- CAROUSEL - HIDDEN ON MOBILE SCREEN -->
-                         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-aos="fade-up">
+                        <!-- CAROUSEL - DISPLAYED ON TABLET AND DESKTOP SCREENS -->
+                         <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                            <div class="carousel-inner">
-                             <ol class="carousel-indicators">
-                               <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                               <li data-target="#carousel" data-slide-to="1"></li>
-                             </ol>
-
                                <div class="carousel-item active">
                                  <a href="https://ethanscoffeeheaven.com/" target="_blank">
                                    <img src="images/ech-banner.webp" class="d-block w-100 mb-2" alt="Ethan's Coffee Heaven project image">
@@ -209,7 +286,7 @@
                                  <a href="https://ethanscoffeeheaven.com/" target="_blank">
                                    <div class="carousel-caption d-none d-md-block">
                                     <h5>ethanscoffeeheaven.com</h5>
-                                    <p>An SEO optimized static website with domain name and hosting</p>
+                                    <p>An SEO optimized static website that is easily found by customers</p>
                                   </div>
                                  </a>
                                </div>
@@ -220,18 +297,16 @@
                                <a href="https://vulavula-dre.lovestoblog.com/" target="_blank">
                                  <div class="carousel-caption d-none d-md-block">
                                   <h5>vulavula-dre.lovestoblog.com</h5>
-                                  <p>A personal WordPress blog with free hosting</p>
+                                  <p>A personal WordPress blog with free domain name and hosting</p>
                                 </div>
                                </a>
                              </div>
                            </div>
-                           <button class="carousel-control-prev" type="button" data-target="#carousel" data-slide="prev">
+                           <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                             <span class="sr-only">Previous</span>
                            </button>
-                           <button class="carousel-control-next" type="button" data-target="#carousel" data-slide="next">
+                           <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                             <span class="sr-only">Next</span>
                            </button>
                           </div>
 
@@ -243,17 +318,17 @@
 
      <!-- TESTIMONIAL -->
 
-    <section class="testimonials mb-4">
+    <section class="testimonials section-padding">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="testimonials-heading">
-              <h4>Testimonials</h4>
+              <h2 class="text-center mb-4"><strong>Testimonials</strong></h2>
             </div>
           </div>
           <div class="col-lg-12">
             <div>
-              <div class="item">
+              <div class="item mb-5">
                 <p>
                   "Michael is very detailed orientated.
                   He did a great job developing our website.
@@ -261,13 +336,17 @@
                   I am grateful to Michael for putting our business on a website accessible to anyone visiting Labasa and Savusavu."
                 </p>
                 <h4>Mel Joseph</h4>
-                <span>Cafe Manager</span>
+                <span><strong>Cafe Manager</strong></span>
                 <i class="fa fa-quote-right"></i>
               </div>
               <div class="item">
-                <p>“Without Michael I wouldn't have a blog”</p>
+                <p>
+                  "One of my goals for 2022 was to get my own personal website.
+                   God granted my wish by directing my path to my mate Michael Godfrey!
+                   He made everything so possible and so efficient with his effort making my dream come true.”
+                </p>
                   <h4>Luke Uluiburotu</h4>
-                  <span>Blogger</span>
+                  <span><strong>Blogger</strong></span>
                   <i class="fa fa-quote-right"></i>
               </div>
             </div>
@@ -320,7 +399,6 @@
      <script src="js/jquery.min.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/aos.js"></script>
-     <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
 
 </body>

@@ -3,20 +3,20 @@
 <head>
 
      <title>Michael Godfrey - Contact</title>
-<!--
-This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm-538-digital-trend
--->
+    <!--
+    This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm-538-digital-trend
+    -->
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="Contact page for Michael Godfrey">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/aos.css">
 
      <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/normalize.css">
      <link rel="stylesheet" href="css/style.css">
 
      <!-- FAVICON -->
@@ -33,6 +33,11 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
 </head>
 <body>
 
+    <!-- SCROLL TO TOP BUTTON -->
+    <button onclick="topFunction()" id="scrollBtn" title="Go to top">
+      <i class="fa fa-arrow-circle-o-up"></i>
+    </button>
+
      <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg position-absolute">
         <div class="container">
@@ -42,12 +47,12 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
               <p>Web Developer</p>
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button id="toggle-menu" class="navbar-toggler" type="button" aria-expanded="false"
+                aria-label="toggle navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-collapse" id="menu" style="display: none">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="index.html#services" class="nav-link smoothScroll">Services</a>
@@ -76,19 +81,19 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
 
                     <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center">
 
-                      <h1 class="mb-4">Let's <strong>talk</strong> about your <strong>next project!</strong></h1>
+                      <h1 class="mb-4">Let's <strong>talk</strong> about meeting your <strong>online marketing</strong> goals.</h1>
 
                       <p>or email me at <a href="mailto:mail@michael-godfrey.com">mail@michael-godfrey.com</a></p>
 
                       <div class="loading-container">
                         <div id="loading" style="display: none"></div>
                       </div>
-
+                      <span id="varTxt" data-aos="fade-up" data-aos-delay="800"></span>
                     </div>
 
 
                     <div class="col-lg-8 mx-auto col-md-10 col-12">
-                      <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                      <form class="contact-form">
                         <div class="row">
                           <div class="col-lg-6 col-12 mb-4">
                             <input id="name" type="text" class="form-control" name="user_name" placeholder="Name">
@@ -97,11 +102,10 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
                             <input id="email" type="email" class="form-control" name="user_email" placeholder="Email">
                           </div>
                           <div class="col-12 mb-4">
-                            <select id="subject" class="custom-select col-12" name="user_subject">
+                            <select id="subject" class="form-control col-12" name="user_subject" onchange="resetSub()">
                               <option value="default" disabled selected>Subject</option>
-                              <option value="website">Websites and hosting</option>
-                              <option value="optimization">Website Optimization</option>
-                              <option value="wordpress">WordPress</option>
+                              <option value="website">New websites and hosting</option>
+                              <option value="optimization">Optimize existing website</option>
                               <option value="other">Other</option>
                             </select>
                           </div>
@@ -168,27 +172,26 @@ This page is adapted from the template "DIGITAL TREND" https://templatemo.com/tm
 
      <!-- SCRIPTS -->
      <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
      <script src="js/message.js"></script>
-     <!-- set select option when user clicks on service -->
+     <!-- set select option when user clicks on service and edit text-->
      <script>
       const subject = document.getElementById('subject');
       subject.value = localStorage.getItem("service");
       subject.value === 'default' ? subject.style.background = "white" : subject.style.background = "gold";
-      // edit h1 text depending on service
-      // const h1 = document.getElementById("h1");
-      // if (subject.value === 'website') {
-      //   h1.innerHTML = "website"
-      // }
-      // if (subject.value === 'optimization') {
-      //   h1.innerHTML = "optimize"
-      // }
-      // if (subject.value === 'wordpress') {
-      //   h1.innerHTML = "Great choice! <strong>WordPress</strong> is free and open source, well supported, highly customizable and easy to use."
-      // }
+
+      const varTxt = document.getElementById("varTxt");
+      if (subject.value === 'website') {
+        varTxt.innerHTML = "From a <strong>fast</strong> static landing page to a WordPress site packed with features. Get the <strong>best site</strong> with domain names and hosting plans that make sense for <strong>your needs</strong>."
+      }
+      if (subject.value === 'optimization') {
+        varTxt.innerHTML = "Optimizing your website is a smart move, it can help <strong>rank higher</strong> in search engine results, attract <strong>more visitors</strong>, and improve your <strong>online presence</strong>."
+      }
+
+      function resetSub() {
+        varTxt.innerHTML = "";
+        subject.style.background = "white";
+      }
      </script>
 
 </body>
