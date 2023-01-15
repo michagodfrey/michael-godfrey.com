@@ -39,6 +39,7 @@
             <a class="navbar-brand" href="index.html">
               <i class="fa fa-code"></i>
               Michael Godfrey
+              <br>
               <p>Web Developer</p>
             </a>
 
@@ -277,9 +278,9 @@
                         </a>
 
                         <!-- CAROUSEL - DISPLAYED ON TABLET AND DESKTOP SCREENS -->
-                         <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                         <div id="carousel" class="carousel">
                            <div class="carousel-inner">
-                               <div class="carousel-item active">
+                               <div class="locationSlide carousel-item">
                                  <a href="https://ethanscoffeeheaven.com/" target="_blank">
                                    <img src="images/ech-banner.webp" class="d-block w-100 mb-2" alt="Ethan's Coffee Heaven project image">
                                  </a>
@@ -290,7 +291,7 @@
                                   </div>
                                  </a>
                                </div>
-                             <div class="carousel-item">
+                             <div class="locationSlide carousel-item">
                                <a href="https://vulavula-dre.lovestoblog.com/" target="_blank">
                                  <img src="images/blog.webp" class="d-block w-100" alt="Vulavula-Dre is Great project image">
                                </a>
@@ -302,10 +303,10 @@
                                </a>
                              </div>
                            </div>
-                           <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                           <button onclick="plusLoc(-1)" class="carousel-control-prev" type="button" aria-label="carousel slide previous button">
                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                            </button>
-                           <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                           <button onclick="plusLoc(1)" class="carousel-control-next" type="button" aria-label="carousel slide next button">
                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
                            </button>
                           </div>
@@ -314,7 +315,6 @@
                </div>
           </div>
      </section>
-
 
      <!-- TESTIMONIAL -->
 
@@ -361,7 +361,7 @@
         <div class="row">
 
           <div class="col-12">
-            <h2 class="text-white mb-4">Michael Godfrey<strong > - Web Developer</strong></h2>
+            <h2 class="text-white mb-4">Michael Godfrey<strong> - Web Developer</strong></h2>
           </div>
 
             <div class="col-12 col-md-6">
@@ -384,9 +384,9 @@
 
           <div class="col-12 col-md-6">
             <ul class="social-icon text-center">
-              <li><a href="https://www.linkedin.com/in/michael-godfrey-82258bb3/" class="fa fa-linkedin"></a></li>
-              <li><a href="https://github.com/michagodfrey" class="fa fa-github"></a></li>
-              <li><a href="https://twitter.com/Michael07865192" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/michael-godfrey-82258bb3/" class="fa fa-linkedin" aria-label="link to Michael Godfrey's LinkedIn profile"></a></li>
+              <li><a href="https://github.com/michagodfrey" class="fa fa-github" aria-label="link to Michael Godfrey's GitHub profile"></a></li>
+              <li><a href="https://twitter.com/Michael07865192" class="fa fa-twitter" aria-label="link to Michael Godfrey's Twitter profile"></a></li>
             </ul>
           </div>
 
@@ -397,7 +397,6 @@
 
      <!-- SCRIPTS -->
      <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
      <script src="js/aos.js"></script>
      <script src="js/custom.js"></script>
 
