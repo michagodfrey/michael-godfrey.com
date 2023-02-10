@@ -40,7 +40,7 @@ https://templatemo.com/tm-538-digital-trend
     --dark-color:           #171819;
     --gold-color:           #FBCB0A;
     --dark-trans-color:     rgba(0, 0, 0, .8);
-    --project-bg:           #DFF6FF;
+    --project-bg:           #f8fdff;
     --menu-bg:              #06283D;
     --gray-color:           #909090;
     --link-color:           #2146C7;
@@ -62,7 +62,7 @@ https://templatemo.com/tm-538-digital-trend
     --border-radius-large:  100px;
     --border-radius-small:  5px;
 
-    --box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    --box-shadow: 0px 5px 7.5px rgba(0, 0, 0, 0.5);
   }
 
   body {
@@ -228,7 +228,12 @@ https://templatemo.com/tm-538-digital-trend
   .section-padding {
     padding: 8em 0;
   }
+
   .section-padding-half {
+    padding: 4em 0 0;
+  }
+
+  .section-padding-about {
     padding: 4em 0;
   }
 
@@ -413,45 +418,39 @@ https://templatemo.com/tm-538-digital-trend
   -----------------------------------------*/
 
   .intro-bg {
-    background-color: var(--project-bg);
-    border-top: var(--white-color) 30px solid;
+    background-image: url(/images/wave-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  .intro-item {
-    border: 2px solid var(--primary-color);
-    box-shadow: var(--box-shadow);
+  .intro {
     border-radius: var(--border-radius-small);
     padding: 2rem;
-    background-image: var(--gradient-bg);
-    display: none;
   }
 
-  .intro-item-mobile {
-    display: block;
-  }
-
-  .intro-item-mobile a {
+  .intro a, .intro__promo a {
     text-decoration: underline;
   }
 
-  .intro-item-right {
-    align-self: flex-end;
-  }
-
-  .intro-item li {
-    font-size: 1.75rem;
-    list-style: none;
-    line-height: 4rem;
-  }
-
-  .intro-item p {
+  .intro p, .intro__promo p {
     text-align: justify;
     font-size: 1.5rem;
     color: var(--dark-color);
   }
 
-  .intro-item li i {
-    color: dodgerblue;
+  .intro__promo {
+    background-image: var(--gradient-bg);
+    padding: 2rem;
+    min-width: 100%;
+  }
+
+  .intro__promo li {
+    font-size: 1.75rem;
+    list-style: none;
+  }
+
+  .intro__promo li i {
+    color: var(--secondary-color);
   }
 
 
@@ -459,75 +458,97 @@ https://templatemo.com/tm-538-digital-trend
      SERVICES
   -----------------------------------------*/
 
-  .card {
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-    max-width: 95%;
-    margin: 0 auto;
+  #services {
+    background-color: var(--project-bg);
   }
 
-  .card:hover {
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-deck {
+    margin: auto;
+    padding: .5rem;
+  }
+
+  .service {
+    max-width: 400px;
+    background-color: white;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+  }
+
+  .service:hover {
     background-image: var(--gradient-bg);
   }
 
-  .card-line {
+  .service img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+  }
+
+  .service h3 {
+    color: var(--secondary-color);
+  }
+
+  .service-line {
     width: 4rem;
     height: .25rem;
     margin: 1rem auto;
     background: var(--primary-color);
   }
 
-  .card-text {
+  .service-text {
     text-align: justify;
     margin: 0 1rem;
     font-size: 20px;
     color: var(--dark-color);
   }
 
-  .card-price {
+  .service-price {
     background-color: var(--primary-color);
     color: var(--white-color);
     border: 5px solid var(--white-color);
     border-radius: var(--border-radius-large);
     font-size: 2rem;
-
   }
 
-  .card-price strong {
+  .service-price strong {
     color: var(--white-color);
   }
 
-  .card img {
-    aspect-ratio: 3/2;
-    object-fit: contain;
-  }
-
-  .card h3 {
-    color: var(--secondary-color);
-  }
 
   /*---------------------------------------
      PROJECT
   -----------------------------------------*/
 
-  .project-title {
-    background-image: var(--gradient-bg);
-    padding: .5rem;
-    border-radius: var(--border-radius-small);
-    box-shadow: var(--box-shadow);
-  }
-
   .project {
     background-image: url(/images/waves-projects-bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .project-title {
+    background-image: var(--gradient-bg);
+    padding: 1rem;
+    margin: 0 .5rem;
+    border-radius: var(--border-radius-small);
     box-shadow: var(--box-shadow);
   }
 
   .jumbotron {
     background-color: var(--dark-trans-color);
     color: var(--white-color);
-    box-shadow: var(--box-shadow);
+  }
+
+  .jumbotron h5 {
+    text-decoration: underline;
   }
 
   .jumbotron p {
@@ -542,6 +563,8 @@ https://templatemo.com/tm-538-digital-trend
 
   .carousel-item {
     max-height: 430px;
+    /* animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
   }
 
   .carousel-item img {
@@ -572,85 +595,31 @@ https://templatemo.com/tm-538-digital-trend
     padding: 1rem;
   }
 
- /**
-  * ----------------------------------------
-  * animation slide-in-left
-  * ----------------------------------------
-  */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
 
-  .slide-in-left {
- 	-webkit-animation: slide-in-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
- 	        animation: slide-in-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
- }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
 
- @-webkit-keyframes slide-in-left {
-   0% {
-     -webkit-transform: translateX(-1000px);
-             transform: translateX(-1000px);
-     opacity: 0;
-   }
-   100% {
-     -webkit-transform: translateX(0);
-             transform: translateX(0);
-     opacity: 1;
-   }
- }
- @keyframes slide-in-left {
-   0% {
-     -webkit-transform: translateX(-1000px);
-             transform: translateX(-1000px);
-     opacity: 0;
-   }
-   100% {
-     -webkit-transform: translateX(0);
-             transform: translateX(0);
-     opacity: 1;
-   }
- }
-
-/**
- * ----------------------------------------
- * animation slide-in-right
- * ----------------------------------------
- */
-
- .slide-in-right {
-	-webkit-animation: slide-in-right 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-right 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  /* Fading animation */
+.fade-animation {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-
-@-webkit-keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
-@keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2022-9-6 11:17:9
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 
   /*
   ---------------------------------------------
@@ -670,13 +639,13 @@ https://templatemo.com/tm-538-digital-trend
     position: relative;
     z-index: 2;
     box-shadow: var(--box-shadow);
-    background-image: var(--gradient-bg);
+    background-color: white;
   }
 
   .testimonials .item p {
     font-size: 20px;
     font-style: italic;
-    color: var(--secondary-color);
+    color: var(--dark-color);
   }
 
   .testimonials .item h4 {
@@ -694,6 +663,7 @@ https://templatemo.com/tm-538-digital-trend
     right: 30px;
     bottom: 30px;
     font-size: 2rem;
+    color: var(--secondary-color);
   }
 
 
@@ -705,15 +675,8 @@ https://templatemo.com/tm-538-digital-trend
     text-align: justify;
   }
 
-  .about-page-img {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-  }
-
-  .about-page-img img {
-    width: 100%;
-    max-width: 500px;
+  .about-page ul {
+    list-style: none;
   }
 
   /*---------------------------------------
@@ -739,17 +702,25 @@ https://templatemo.com/tm-538-digital-trend
     color: rgb(73, 80, 87);
   }
 
-  .loading-container {
-    min-height: 60px;
-    width: 100%;
-  }
-
   textarea {
     min-height: 100px;
   }
 
-  #loading {
+  .loading-container {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .loading {
     margin: auto;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
     border: 1rem solid var(--project-bg);
     border-top: 1rem solid var(--primary-color);
     border-bottom: 1rem solid var(--primary-color);
@@ -819,7 +790,6 @@ https://templatemo.com/tm-538-digital-trend
   -----------------------------------------*/
 
   .social-icon {
-    position: relative;
     padding: 0;
     margin-top: 1em;
   }
@@ -837,6 +807,15 @@ https://templatemo.com/tm-538-digital-trend
     text-align: center;
   }
 
+  svg {
+     max-height: 50px;
+     background-color: white;
+     border-radius: 50%;
+  }
+
+  svg:hover {
+    fill: var(--primary-color);
+  }
 
   /*---------------------------------------
      RESPONSIVE STYLES
@@ -854,8 +833,16 @@ https://templatemo.com/tm-538-digital-trend
       font-size: var(--base-font-size);
     }
 
-    .intro-img-box {
-      transform: translateY(0px);
+    .intro li {
+      line-height: 4rem;
+    }
+
+    .service-deck {
+      display: flex;
+    }
+
+    .service {
+      margin: 0 .5rem;
     }
 
     .project h2 {
@@ -874,31 +861,20 @@ https://templatemo.com/tm-538-digital-trend
       display: block;
     }
 
-    .intro {
-      background-image: url("/images/responsive-web.webp");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: center;
-    }
-
-    .intro-item {
-      display: block;
-    }
-
-    .intro-item-mobile {
-      display: none;
-    }
-
-    .intro-item {
-      max-width: 70%;
-    }
-
     .jumbotron {
       display: none;
     }
 
     .carousel {
       display: block;
+    }
+
+    .slider-wrapper {
+      display: block;
+    }
+
+    .contact-h1 {
+      padding-top: 40px;
     }
   }
 

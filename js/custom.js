@@ -21,7 +21,8 @@
     button.ariaExpanded = !JSON.parse(button.ariaExpanded);
   })
 
-  // STORE SERVICE USER CLICKS ON AND OPEN CONTACT PAGE WITH SERVICE AS TOPIC ON FORM
+  // STORE SERVICE THE USER CLICKS ON AND OPEN CONTACT PAGE WITH
+  // THAT SERVICE AS TOPIC ON FORM
   let selectedService = "";
 
   function resetService() {
@@ -56,33 +57,24 @@ let slideIndex = 1;
 showLocation(slideIndex);
 
 function plusLoc(n) {
-  let dir = "";
-  n < 1 ? dir = "left" : dir = "right";
-  showLocation(slideIndex += n, dir);
+  showLocation(slideIndex += n);
 }
 
-// function currentLoc(n) {
-//   showLocation(slideIndex = n);
-// }
+function currentLoc(n) {
+  showLocation(slideIndex = n);
+}
 
-function showLocation(n, dir) {
-  const slide = document.getElementsByClassName("locationSlide");
-  // const dots = document.getElementsByClassName("dot");
+function showLocation(n) {
+  const slide = document.getElementsByClassName("carousel-item");
+  const dots = document.getElementsByClassName("dot");
   if (n > slide.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slide.length}
   for (let i = 0; i < slide.length; i++) {
     slide[i].style.display = "none";
   }
-  // for (i = 0; i < dots.length; i++) {
-  //   dots[i].className = dots[i].className.replace("active", "");
-  // }
-  if (dir === 'left') {
-    slide[slideIndex-1].classList.remove("slide-in-right")
-    slide[slideIndex-1].classList.add("slide-in-left")
-  } else {
-    slide[slideIndex-1].classList.remove("slide-in-left")
-    slide[slideIndex-1].classList.add("slide-in-right")
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("active", "");
   }
   slide[slideIndex-1].style.display = "block";
-  // dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " active";
 }
