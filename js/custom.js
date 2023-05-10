@@ -52,29 +52,48 @@
   }
 
 // CAROUSEL
-let slideIndex = 1;
+const slidesContainer = document.getElementById("slides-container");
+const slide = document.querySelector(".slide");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
 
-showLocation(slideIndex);
+const dotsContainer = document.querySelector(".dot-group");
+const dots = document.querySelectorAll(".dot")
 
-function plusLoc(n) {
-  showLocation(slideIndex += n);
+let slideIndex = 0;
+
+function setActiveDot(index) {
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  dots[index].classList.add("active")
 }
 
-function currentLoc(n) {
-  showLocation(slideIndex = n);
-}
+nextButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft += slideWidth;
 
-function showLocation(n) {
-  const slide = document.getElementsByClassName("carousel-item");
-  const dots = document.getElementsByClassName("dot");
-  if (n > slide.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slide.length}
-  for (let i = 0; i < slide.length; i++) {
-    slide[i].style.display = "none";
+  if (slideIndex < 2) {
+    slideIndex++;
+    setActiveDot(slideIndex);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace("active", "");
+});
+
+prevButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft -= slideWidth;
+
+  if (slideIndex > 0) {
+    slideIndex--;
+    setActiveDot(slideIndex);
   }
-  slide[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+});
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft = slideWidth * index;
+    slideIndex = index;
+    setActiveDot(slideIndex);
+  });
+});

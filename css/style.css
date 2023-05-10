@@ -43,6 +43,7 @@ https://templatemo.com/tm-538-digital-trend
     --project-bg:           #f8fdff;
     --menu-bg:              #06283D;
     --gray-color:           #909090;
+    --light-gray-color:     #f1f5f9;
     --link-color:           #2146C7;
     --p-color:              #666262;
     --gradient-bg:          radial-gradient( circle 489px at 49.3% 46.6%,  rgba(255,214,126,1) 0%, rgba(253,200,0,1) 100.2% );
@@ -62,7 +63,7 @@ https://templatemo.com/tm-538-digital-trend
     --border-radius-large:  100px;
     --border-radius-small:  5px;
 
-    --box-shadow: 0px 5px 7.5px rgba(0, 0, 0, 0.5);
+    --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   }
 
   body {
@@ -70,6 +71,9 @@ https://templatemo.com/tm-538-digital-trend
     font-family: var(--base-font-family);
   }
 
+  section {
+    padding: 4rem 0;
+  }
 
   /*---------------------------------------
      TYPOGRAPHY
@@ -86,6 +90,7 @@ https://templatemo.com/tm-538-digital-trend
 
   h2 {
     font-size: var(--h2-font-size);
+    font-weight: 300;
   }
 
   h3 {
@@ -192,6 +197,11 @@ https://templatemo.com/tm-538-digital-trend
      GENERAL
   -----------------------------------------*/
 
+  html {
+    height: 100%;
+    width: 100%;
+  }
+
   * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -223,18 +233,6 @@ https://templatemo.com/tm-538-digital-trend
   ::selection {
     background: var(--secondary-color);
     color: var(--white-color);
-  }
-
-  .section-padding {
-    padding: 8em 0;
-  }
-
-  .section-padding-half {
-    padding: 4em 0 0;
-  }
-
-  .section-padding-about {
-    padding: 4em 0;
   }
 
   /*---------------------------------------
@@ -385,12 +383,15 @@ https://templatemo.com/tm-538-digital-trend
 
   .hero-text h1 {
     font-size: var(--h3-font-size);
-
   }
 
   .hero-text span {
     font-size: var(--h1-font-size);
     text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  }
+
+  .hero-text p {
+    color:
   }
 
   .hero-bg {
@@ -418,14 +419,20 @@ https://templatemo.com/tm-538-digital-trend
   -----------------------------------------*/
 
   .intro-bg {
-    background-image: url(/images/wave-bottom.svg);
+    background-image: url(/images/responsive-web-design.webp);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .intro__card {
+    background-color: #f1f5f9;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-small);
   }
 
   .intro {
-    border-radius: var(--border-radius-small);
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .intro a, .intro__promo a {
@@ -439,7 +446,6 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   .intro__promo {
-    background-image: var(--gradient-bg);
     padding: 2rem;
     min-width: 100%;
   }
@@ -458,32 +464,18 @@ https://templatemo.com/tm-538-digital-trend
      SERVICES
   -----------------------------------------*/
 
-  #services {
-    background-color: var(--project-bg);
-  }
-
-  .services-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .service-deck {
-    margin: auto;
-    padding: .5rem;
-  }
-
   .service {
-    max-width: 400px;
-    background-color: white;
-    margin: 0 auto 1rem;
-    padding: 1rem;
-    border-radius: var(--border-radius-small);
+    background-color: var(--light-gray-color);
     box-shadow: var(--box-shadow);
-    cursor: pointer;
+    border-radius: var(--border-radius-small);
+    padding: 1rem;
+    margin: 2rem 0;
+
   }
 
-  .service:hover {
-    background-image: var(--gradient-bg);
+  .flex-reverse {
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   .service img {
@@ -493,106 +485,117 @@ https://templatemo.com/tm-538-digital-trend
     object-fit: contain;
   }
 
-  .service h3 {
-    color: var(--secondary-color);
+  .service__descpription {
+    line-height: 1.8
   }
-
-  .service-line {
-    width: 4rem;
-    height: .25rem;
-    margin: 1rem auto;
-    background: var(--primary-color);
-  }
-
-  .service-text {
-    text-align: justify;
-    margin: 0 1rem;
-    font-size: 20px;
-    color: var(--dark-color);
-  }
-
-  .service-price {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: 5px solid var(--white-color);
-    border-radius: var(--border-radius-large);
-    font-size: 2rem;
-  }
-
-  .service-price strong {
-    color: var(--white-color);
-  }
-
 
   /*---------------------------------------
      PROJECT
   -----------------------------------------*/
 
-  .project {
+  .triple-wave-bg {
     background-image: url(/images/waves-projects-bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  .project-title {
-    background-image: var(--gradient-bg);
-    padding: 1rem;
-    margin: 0 .5rem;
-    border-radius: var(--border-radius-small);
-    box-shadow: var(--box-shadow);
-  }
-
-  .jumbotron {
-    background-color: var(--dark-trans-color);
-    color: var(--white-color);
-  }
-
-  .jumbotron h5 {
-    text-decoration: underline;
-  }
-
-  .jumbotron p {
-    color: var(--white-color);
-  }
-
-  .carousel {
-    display: none;
-    max-width: 1285px;
+  /* carousel slider */
+  .slider-wrapper {
+    position: relative;
+    overflow: hidden;
     margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1140px;
   }
 
-  .carousel-item {
-    max-height: 430px;
-    /* animation-iteration-count: 1;
-    animation-fill-mode: forwards; */
+  .slides-container {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    overflow: scroll;
+    scroll-behavior: smooth;
   }
 
-  .carousel-item img {
-    max-width: 900px;
+  .slides-container {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  /* WebKit */
+  .slides-container::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+  }
+
+  .slide img {
+    width: 100%;
     height: auto;
-    margin: auto;
   }
 
-  .carousel-caption {
-    background-color: var(--dark-trans-color);
-    border-radius: var(--border-radius-small);
-    max-width: 780px;
-    margin: auto;
-  }
-
-  .carousel-caption p {
-    color: var(--white-color);
-  }
-
-  .carousel-control-prev, .carousel-control-next {
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-  }
-
-  .carousel-control-prev span, .carousel-control-next span {
+  .slide-caption {
     background-color: var(--dark-trans-color);
     padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .slide-caption h5, .slide-caption p {
+    color: white;
+  }
+
+  .slide-arrow {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 4rem;
+    background-color: var(--dark-color);
+    color: white;
+    border: none;
+    width: 3rem;
+    font-size: 6rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
+  }
+
+  .slide-arrow:hover,
+  .slide-arrow:focus {
+    opacity: 1;
+    outline: none;
+  }
+
+  #slide-arrow-prev {
+    left: 0;
+    padding-left: 0.25rem;
+    border-radius: 0 2rem 2rem 0;
+  }
+
+  #slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
+  }
+
+  .slide-arrow span {
+    padding-bottom: 32px;
+  }
+
+  .dot-group {
+    text-align: center;
   }
 
   .dot {
@@ -610,42 +613,26 @@ https://templatemo.com/tm-538-digital-trend
     background-color: #717171;
   }
 
-  /* Fading animation */
-.fade-animation {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
   /*
   ---------------------------------------------
     TESTIMONIALS
   ---------------------------------------------
   */
 
-  .testimonials {
-    background-color: var(--project-bg);
-  }
-
   .testimonials .item {
     border-radius: 1rem;
     padding: 2rem;
     margin: 1rem;
-    transition: all .3s;
     position: relative;
-    z-index: 2;
     box-shadow: var(--box-shadow);
-    background-color: white;
+    background-color: var(--light-gray-color);
   }
 
   .testimonials .item p {
     font-size: 20px;
     font-style: italic;
     color: var(--dark-color);
+    line-height: 1.8;
   }
 
   .testimonials .item h4 {
@@ -673,6 +660,7 @@ https://templatemo.com/tm-538-digital-trend
 
   .about-page p {
     text-align: justify;
+    line-height: 1.8;
   }
 
   .about-page ul {
@@ -829,20 +817,16 @@ https://templatemo.com/tm-538-digital-trend
       --h3-font-size:         32px;
     }
 
+    section {
+      padding: 8rem 0;
+    }
+
     .nav-link {
       font-size: var(--base-font-size);
     }
 
     .intro li {
       line-height: 4rem;
-    }
-
-    .service-deck {
-      display: flex;
-    }
-
-    .service {
-      margin: 0 .5rem;
     }
 
     .project h2 {
@@ -858,18 +842,6 @@ https://templatemo.com/tm-538-digital-trend
     }
 
     .navbar-brand p {
-      display: block;
-    }
-
-    .jumbotron {
-      display: none;
-    }
-
-    .carousel {
-      display: block;
-    }
-
-    .slider-wrapper {
       display: block;
     }
 
