@@ -795,10 +795,9 @@ https://templatemo.com/tm-538-digital-trend
     text-align: center;
   }
 
-  svg {
-     max-height: 50px;
-     background-color: white;
-     border-radius: 50%;
+  .social-icon li a svg {
+    margin-bottom: 5px;
+    margin-left: -10px;
   }
 
   svg:hover {
