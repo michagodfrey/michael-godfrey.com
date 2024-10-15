@@ -1,6 +1,6 @@
 # Freelance Web Developer Portfolio
 
-This repository contains my portfolio page as a freelance web developer and administrator.
+This repository is retired. See the current version of my website here: [new repository](https://github.com/michagodfrey/website).
 
 ## Resources used
 
@@ -29,6 +29,8 @@ Intro section background svg [softr](https://www.softr.io/tools/svg-wave-generat
 Projects section background svg from [Svg Wave](https://svgwave.in/)
 
 Cryptocurrency icons from [Cryptocurrency Icons](http://cryptoicons.co/)
+
+X logo from [Icons8](https://icons8.com/)
 
 ### Code
 
